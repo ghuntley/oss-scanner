@@ -25,7 +25,7 @@ import time
 CACHE = pathlib.Path(os.environ.get("XDG_CACHE_HOME") or "~/.cache").expanduser() / "oss-scanner-check"
 
 # The resources the scanner gives each project.
-BUILD_MINUTES = 45  # time limit from the start of the clone to the finished image
+BUILD_MINUTES = 90  # large release projects may need a cold-cache build window
 BUILD_MACHINE = {"cpus": 16, "mem_gb": 64, "disk_gb": 120}
 AGENT_MACHINE = {"cpus": 2, "mem_gb": 8}
 
